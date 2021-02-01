@@ -1,26 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CrearOtroRegistroTarea3.Migrations
+namespace CrearOtroRegistroCompleto.Migrations
 {
     public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Roles",
-                columns: table => new
-                {
-                    RolId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    FechaCreacion = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Descripcion = table.Column<string>(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Roles", x => x.RolId);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Usuarios",
                 columns: table => new
@@ -32,8 +18,10 @@ namespace CrearOtroRegistroTarea3.Migrations
                     Nombres = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
                     Clave = table.Column<string>(type: "TEXT", nullable: true),
-                    RolId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Activo = table.Column<bool>(type: "INTEGER", nullable: false)
+                    Rol = table.Column<string>(type: "TEXT", nullable: true),
+                    Activo = table.Column<bool>(type: "INTEGER", nullable: false),
+                    ConfirmarClave = table.Column<string>(type: "TEXT", nullable: true),
+                    CostoHora = table.Column<float>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -43,9 +31,6 @@ namespace CrearOtroRegistroTarea3.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Roles");
-
             migrationBuilder.DropTable(
                 name: "Usuarios");
         }

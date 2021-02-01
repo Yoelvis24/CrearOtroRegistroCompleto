@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CrearOtroRegistroTarea3.Entidades
+namespace CrearOtroRegistroCompleto.Entidades
 {
     public class Usuarios
     {
@@ -14,8 +14,10 @@ namespace CrearOtroRegistroTarea3.Entidades
         public string Nombres { get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
-        public int RolId { get; set; }
+        public string Rol { get; set; }
         public bool Activo { get; set; }
+        public string ConfirmarClave { get; set; }
+        public float CostoHora { get; set; }
 
         public Usuarios()
         {
@@ -25,8 +27,10 @@ namespace CrearOtroRegistroTarea3.Entidades
             Nombres = string.Empty;
             Email = string.Empty;
             Clave = string.Empty;
-            RolId = 0;
+            Rol = string.Empty;
             Activo = true;
+            ConfirmarClave = string.Empty;
+            CostoHora = 0.0f;
         }
     }
 }

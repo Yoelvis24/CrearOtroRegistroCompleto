@@ -1,16 +1,15 @@
-﻿using CrearOtroRegistroTarea3.Entidades;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
-using System;
+using CrearOtroRegistroCompleto.Entidades;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CrearOtroRegistroTarea3.DAL
+namespace CrearOtroRegistroCompleto.DAL
 {
-    class Contexto : DbContext
+    public class Contexto : DbContext
     {
         public DbSet<Usuarios> Usuarios { get; set; }
-        public DbSet<Roles> Roles { get; set; }
-
+     
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source = GestionUsuarios.Db");

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CrearOtroRegistroTarea3
+namespace CrearOtroRegistroCompleto
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace CrearOtroRegistroTarea3
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registro());
+            Application.Run(new RegistroForm());
         }
     }
 }
