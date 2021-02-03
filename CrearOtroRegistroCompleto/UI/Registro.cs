@@ -24,6 +24,20 @@ namespace CrearOtroRegistroCompleto
             FechaIngresoDateTimePicker.CustomFormat = "dd/MM/yyyy";
         }
 
+        public void Limpiar()
+        {
+            usuarioIdTextBox.Text = string.Empty;
+            aliasTextBox.Text = string.Empty;
+            emailTextBox.Text = string.Empty;
+            claveTextBox.Text = string.Empty;
+            nombresTextBox.Text = string.Empty;
+            confirmarTextBox.Text = string.Empty;
+            rolComboBox.Text = string.Empty;
+            costoTextBox.Text = string.Empty;
+            FechaIngresoDateTimePicker.Value = DateTime.Now;
+            errorProvider1.Clear();
+        }
+
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
@@ -62,17 +76,8 @@ namespace CrearOtroRegistroCompleto
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
-        { 
-            usuarioIdTextBox.Text = "";
-            aliasTextBox.Text = "";
-            emailTextBox.Text = "";
-            claveTextBox.Text = "";
-            nombresTextBox.Text = "";
-            confirmarTextBox.Text = "";
-            rolComboBox.Text = "";
-            costoTextBox.Text = "";
-            FechaIngresoDateTimePicker.Value = DateTime.Now;
-            errorProvider1.Clear();
+        {
+            Limpiar();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
