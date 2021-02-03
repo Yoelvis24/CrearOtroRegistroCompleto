@@ -73,6 +73,17 @@ namespace CrearOtroRegistroCompleto
             return paso;
         }
 
+        private void LlenarCampos(Usuarios usuarios)
+        {
+            usuarioIdTextBox.Text = Convert.ToString(usuarios.UsuarioId);
+            nombresTextBox.Text = usuarios.Nombres;
+            aliasTextBox.Text = usuarios.Alias;
+            emailTextBox.Text = usuarios.Email;
+            confirmarTextBox.Text = usuarios.ConfirmarClave;
+            FechaIngresoDateTimePicker.Value = usuarios.FechaIngreso;
+            costoTextBox.Text = Convert.ToString(usuarios.CostoHora);
+            claveTextBox.Text = usuarios.Clave;
+        }
 
         public void Limpiar()
         {
