@@ -85,6 +85,24 @@ namespace CrearOtroRegistroCompleto
             claveTextBox.Text = usuarios.Clave;
         }
 
+        private Usuarios LlenarClase()
+        {
+            Usuarios usuarios = new Usuarios();
+
+            usuarios.UsuarioId = Convert.ToInt32(usuarioIdTextBox.Text);
+            usuarios.Alias = aliasTextBox.Text;
+            usuarios.Email = emailTextBox.Text;
+            usuarios.Clave = claveTextBox.Text;
+            usuarios.FechaIngreso = FechaIngresoDateTimePicker.Value;
+            usuarios.Activo = activoCheckBox.Checked;
+            usuarios.Nombres = nombresTextBox.Text;
+            usuarios.ConfirmarClave = confirmarTextBox.Text;
+            usuarios.CostoHora = Convert.ToSingle(costoTextBox.Text);
+            usuarios.Rol = rolComboBox.Text;
+
+            return usuarios;
+        }
+
         public void Limpiar()
         {
             usuarioIdTextBox.Text = string.Empty;
