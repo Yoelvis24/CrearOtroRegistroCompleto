@@ -24,6 +24,56 @@ namespace CrearOtroRegistroCompleto
             FechaIngresoDateTimePicker.CustomFormat = "dd/MM/yyyy";
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            errorProvider1.Clear();
+
+            if (usuarioIdTextBox.Text == "")
+            {
+                errorProvider1.SetError(usuarioIdTextBox, "Campo obligatorio");
+                paso = false;
+            }
+
+            if (nombresTextBox.Text == "")
+            {
+                errorProvider1.SetError(nombresTextBox, "Campo obligatorio");
+                paso = false;
+            }
+
+            if (claveTextBox.Text == "")
+            {
+                errorProvider1.SetError(claveTextBox, "Campo obligatorio");
+                paso = false;
+            }
+
+            if (confirmarTextBox.Text == "")
+            {
+                errorProvider1.SetError(confirmarTextBox, "Campo obligatorio");
+                paso = false;
+            }
+
+            if (emailTextBox.Text == "")
+            {
+                errorProvider1.SetError(emailTextBox, "Campo obligatorio");
+                paso = false;
+            }
+
+            if (rolComboBox.Text == "")
+            {
+                errorProvider1.SetError(rolComboBox, "Campo obligatorio");
+                paso = false;
+            }
+
+            if (confirmarTextBox.Text != claveTextBox.Text && confirmarTextBox.Text != "")
+            {
+                errorProvider1.SetError(confirmarTextBox, "Claves no coinciden");
+                paso = false;
+            }
+            return paso;
+        }
+
+
         public void Limpiar()
         {
             usuarioIdTextBox.Text = string.Empty;
