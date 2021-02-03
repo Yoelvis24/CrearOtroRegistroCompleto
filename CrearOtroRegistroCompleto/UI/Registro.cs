@@ -1,6 +1,7 @@
 ﻿using System;
 using CrearOtroRegistroCompleto.DAL;
 using CrearOtroRegistroCompleto.Entidades;
+using CrearOtroRegistroCompleto.BLL;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,76 +24,6 @@ namespace CrearOtroRegistroCompleto
             FechaIngresoDateTimePicker.CustomFormat = "dd/MM/yyyy";
         }
 
-        public static bool Existe(int id)
-        {
-            Contexto contexto = new Contexto();
-            bool encontrado = false;
-
-            try
-            {
-                encontrado = contexto.Usuarios.Any(e => e.UsuarioId == id);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return encontrado;
-        }
-
-        public static bool Eliminar(int id)
-        {
-            bool interruptor = false;
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                var usuarios = contexto.Usuarios.Find(id);
-
-                if (usuarios != null)
-                {
-                    contexto.Usuarios.Remove(usuarios);//Se elimina la entidad
-                    interruptor = contexto.SaveChanges() > 0;
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return interruptor;
-        }
-
-       
-        public static Usuarios Buscar(int id)
-        {
-            Contexto contexto = new Contexto();
-            Usuarios usuarios = new Usuarios();
-
-            try
-            {
-                usuarios = contexto.Usuarios.Find(id);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return usuarios;
-        }
-
-
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
@@ -108,9 +39,9 @@ namespace CrearOtroRegistroCompleto
             }
             else
             {
-                if (Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
+                if (UsuarioBLL.Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
                 {
-                    usuarios = Buscar(Convert.ToInt32(usuarioIdTextBox.Text));
+                    usuarios = UsuarioBLL.Buscar(Convert.ToInt32(usuarioIdTextBox.Text));
                     ventana.UsuarioIdResultTextBox.Text = Convert.ToString(usuarios.UsuarioId);
                     ventana.NombresResultTextBox.Text = usuarios.Nombres;
                     ventana.AliasResultTextBox.Text = usuarios.Alias;
@@ -166,9 +97,9 @@ namespace CrearOtroRegistroCompleto
             {
                 //Verificamos que no exista un id igual, 
                 //en caso de que exista, no se guarda
-                if (Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
+                if (UsuarioBLL.Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
                 {
-                    Eliminar(Convert.ToInt32(usuarioIdTextBox.Text));
+                    UsuarioBLL.Eliminar(Convert.ToInt32(usuarioIdTextBox.Text));
 
                     usuarios.UsuarioId = Convert.ToInt32(usuarioIdTextBox.Text);
                     usuarios.Alias = aliasTextBox.Text;
@@ -219,11 +150,8 @@ namespace CrearOtroRegistroCompleto
             }
             else
             {
-                if (Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
-                {
-                    Eliminar(Convert.ToInt32(usuarioIdTextBox.Text));
+                if (UsuarioBLL.Eliminar(Convert.ToInt32(usuarioIdTextBox.Text)))
                     MessageBox.Show("Usuario eliminado");
-                }
                 else
                     MessageBox.Show("Este usuario no existe");
             }
