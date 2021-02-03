@@ -133,5 +133,26 @@ namespace CrearOtroRegistroCompleto.BLL
                 return Modificar(usuarios);
         }
 
+        private static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                //Obtener la lista y filtrarla según el criterio recibido por parámetro
+                lista = contexto.Usuarios.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
+        }
     }
 }
