@@ -5,6 +5,7 @@ using CrearOtroRegistroCompleto.Entidades;
 using CrearOtroRegistroCompleto.DAL;
 using System.Linq;
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrearOtroRegistroCompleto.BLL
 {
@@ -110,7 +111,7 @@ namespace CrearOtroRegistroCompleto.BLL
 
             try
             {
-                contexto.Entry(usuarios).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                contexto.Entry(usuarios).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
