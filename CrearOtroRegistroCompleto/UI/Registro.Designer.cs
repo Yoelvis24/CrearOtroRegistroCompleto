@@ -42,7 +42,6 @@ namespace CrearOtroRegistroCompleto
             this.claveTextBox = new System.Windows.Forms.TextBox();
             this.aliasTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
-            this.usuarioIdTextBox = new System.Windows.Forms.TextBox();
             this.confirmarLabel = new System.Windows.Forms.Label();
             this.claveLabel = new System.Windows.Forms.Label();
             this.nombresLabel = new System.Windows.Forms.Label();
@@ -55,7 +54,9 @@ namespace CrearOtroRegistroCompleto
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.usuarioIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioIdNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaIngresoDateTimePicker
@@ -158,14 +159,6 @@ namespace CrearOtroRegistroCompleto
             this.nombresTextBox.Size = new System.Drawing.Size(290, 23);
             this.nombresTextBox.TabIndex = 40;
             // 
-            // usuarioIdTextBox
-            // 
-            this.usuarioIdTextBox.Location = new System.Drawing.Point(121, 58);
-            this.usuarioIdTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.usuarioIdTextBox.Name = "usuarioIdTextBox";
-            this.usuarioIdTextBox.Size = new System.Drawing.Size(110, 23);
-            this.usuarioIdTextBox.TabIndex = 39;
-            // 
             // confirmarLabel
             // 
             this.confirmarLabel.AutoSize = true;
@@ -230,7 +223,7 @@ namespace CrearOtroRegistroCompleto
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(237, 51);
+            this.BuscarButton.Location = new System.Drawing.Point(247, 51);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(43, 34);
             this.BuscarButton.TabIndex = 55;
@@ -280,11 +273,19 @@ namespace CrearOtroRegistroCompleto
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // usuarioIdNumericUpDown
+            // 
+            this.usuarioIdNumericUpDown.Location = new System.Drawing.Point(121, 57);
+            this.usuarioIdNumericUpDown.Name = "usuarioIdNumericUpDown";
+            this.usuarioIdNumericUpDown.Size = new System.Drawing.Size(120, 23);
+            this.usuarioIdNumericUpDown.TabIndex = 59;
+            // 
             // RegistroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 356);
+            this.Controls.Add(this.usuarioIdNumericUpDown);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
@@ -302,7 +303,6 @@ namespace CrearOtroRegistroCompleto
             this.Controls.Add(this.claveTextBox);
             this.Controls.Add(this.aliasTextBox);
             this.Controls.Add(this.nombresTextBox);
-            this.Controls.Add(this.usuarioIdTextBox);
             this.Controls.Add(this.confirmarLabel);
             this.Controls.Add(this.claveLabel);
             this.Controls.Add(this.nombresLabel);
@@ -312,6 +312,7 @@ namespace CrearOtroRegistroCompleto
             this.Name = "RegistroForm";
             this.Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioIdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +331,6 @@ namespace CrearOtroRegistroCompleto
         private System.Windows.Forms.TextBox claveTextBox;
         private System.Windows.Forms.TextBox aliasTextBox;
         private System.Windows.Forms.TextBox nombresTextBox;
-        private System.Windows.Forms.TextBox usuarioIdTextBox;
         private System.Windows.Forms.Label confirmarLabel;
         private System.Windows.Forms.Label claveLabel;
         private System.Windows.Forms.Label nombresLabel;
@@ -343,6 +343,7 @@ namespace CrearOtroRegistroCompleto
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NumericUpDown usuarioIdNumericUpDown;
     }
 }
 

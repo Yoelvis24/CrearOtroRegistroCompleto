@@ -29,9 +29,9 @@ namespace CrearOtroRegistroCompleto
             bool paso = true;
             errorProvider1.Clear();
 
-            if (usuarioIdTextBox.Text == "")
+            if (usuarioIdNumericUpDown.Value == 0)
             {
-                errorProvider1.SetError(usuarioIdTextBox, "Campo obligatorio");
+                errorProvider1.SetError(usuarioIdNumericUpDown, "Campo obligatorio");
                 paso = false;
             }
 
@@ -75,7 +75,7 @@ namespace CrearOtroRegistroCompleto
 
         private void LlenarCampos(Usuarios usuarios)
         {
-            usuarioIdTextBox.Text = Convert.ToString(usuarios.UsuarioId);
+            usuarioIdNumericUpDown.Value = usuarios.UsuarioId;
             nombresTextBox.Text = usuarios.Nombres;
             aliasTextBox.Text = usuarios.Alias;
             emailTextBox.Text = usuarios.Email;
@@ -89,7 +89,7 @@ namespace CrearOtroRegistroCompleto
         {
             Usuarios usuarios = new Usuarios();
 
-            usuarios.UsuarioId = Convert.ToInt32(usuarioIdTextBox.Text);
+            usuarios.UsuarioId = Convert.ToInt32(usuarioIdNumericUpDown.Value);
             usuarios.Alias = aliasTextBox.Text;
             usuarios.Email = emailTextBox.Text;
             usuarios.Clave = claveTextBox.Text;
@@ -103,9 +103,10 @@ namespace CrearOtroRegistroCompleto
             return usuarios;
         }
 
+
         public void Limpiar()
         {
-            usuarioIdTextBox.Text = string.Empty;
+            usuarioIdNumericUpDown.Value = 0;
             aliasTextBox.Text = string.Empty;
             emailTextBox.Text = string.Empty;
             claveTextBox.Text = string.Empty;
@@ -125,16 +126,16 @@ namespace CrearOtroRegistroCompleto
             contexto.Dispose();
 
             //Igualamos cada objeto grafico de la 2da ventana al valor que queremos que tome
-            if (usuarioIdTextBox.Text == "")
+            if (usuarioIdNumericUpDown.Value == 0)
             {
                 //Indicamos los errores que mostrará si algún campo queda vacío
-                errorProvider1.SetError(usuarioIdTextBox, "Campo obligatorio");
+                errorProvider1.SetError(usuarioIdNumericUpDown, "Campo obligatorio");
             }
             else
             {
-                if (UsuarioBLL.Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
+                if (UsuarioBLL.Existe(Convert.ToInt32(usuarioIdNumericUpDown.Value)))
                 {
-                    usuarios = UsuarioBLL.Buscar(Convert.ToInt32(usuarioIdTextBox.Text));
+                    usuarios = UsuarioBLL.Buscar(Convert.ToInt32(usuarioIdNumericUpDown.Value));
                     ventana.UsuarioIdResultTextBox.Text = Convert.ToString(usuarios.UsuarioId);
                     ventana.NombresResultTextBox.Text = usuarios.Nombres;
                     ventana.AliasResultTextBox.Text = usuarios.Alias;
@@ -164,11 +165,11 @@ namespace CrearOtroRegistroCompleto
             Contexto contexto = new Contexto();
             Usuarios usuarios = new Usuarios();
 
-            if (usuarioIdTextBox.Text == "" || confirmarTextBox.Text == "" || aliasTextBox.Text == "" || nombresTextBox.Text == "" ||
+            if (usuarioIdNumericUpDown.Value == 0 || confirmarTextBox.Text == "" || aliasTextBox.Text == "" || nombresTextBox.Text == "" ||
                  claveTextBox.Text == "" || emailTextBox.Text == "" || rolComboBox.Text == "" || costoTextBox.Text == "")
             {
                 //Indicamos los errores que mostrará si algún campo queda vacío
-                errorProvider1.SetError(usuarioIdTextBox, "Campo obligatorio");
+                errorProvider1.SetError(usuarioIdNumericUpDown, "Campo obligatorio");
                 errorProvider1.SetError(confirmarTextBox, "Campo obligatorio");
                 errorProvider1.SetError(aliasTextBox, "Campo obligatorio");
                 errorProvider1.SetError(nombresTextBox, "Campo obligatorio");
@@ -181,11 +182,11 @@ namespace CrearOtroRegistroCompleto
             {
                 //Verificamos que no exista un id igual, 
                 //en caso de que exista, no se guarda
-                if (UsuarioBLL.Existe(Convert.ToInt32(usuarioIdTextBox.Text)))
+                if (UsuarioBLL.Existe(Convert.ToInt32(usuarioIdNumericUpDown.Value)))
                 {
-                    UsuarioBLL.Eliminar(Convert.ToInt32(usuarioIdTextBox.Text));
+                    UsuarioBLL.Eliminar(Convert.ToInt32(usuarioIdNumericUpDown.Value));
 
-                    usuarios.UsuarioId = Convert.ToInt32(usuarioIdTextBox.Text);
+                    usuarios.UsuarioId = Convert.ToInt32(usuarioIdNumericUpDown.Value);
                     usuarios.Alias = aliasTextBox.Text;
                     usuarios.Email = emailTextBox.Text;
                     usuarios.Clave = claveTextBox.Text;
@@ -204,7 +205,7 @@ namespace CrearOtroRegistroCompleto
                 }
                 else
                 {
-                    usuarios.UsuarioId = Convert.ToInt32(usuarioIdTextBox.Text);
+                    usuarios.UsuarioId = Convert.ToInt32(usuarioIdNumericUpDown.Value);
                     usuarios.Alias = aliasTextBox.Text;
                     usuarios.Email = emailTextBox.Text;
                     usuarios.Clave = claveTextBox.Text;
@@ -227,14 +228,14 @@ namespace CrearOtroRegistroCompleto
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            if(usuarioIdTextBox.Text == "")
+            if(usuarioIdNumericUpDown.Value == 0)
             {
                 //Indicamos los errores que mostrará si algún campo queda vacío
-                errorProvider1.SetError(usuarioIdTextBox, "Campo obligatorio");
+                errorProvider1.SetError(usuarioIdNumericUpDown, "Campo obligatorio");
             }
             else
             {
-                if (UsuarioBLL.Eliminar(Convert.ToInt32(usuarioIdTextBox.Text)))
+                if (UsuarioBLL.Eliminar(Convert.ToInt32(usuarioIdNumericUpDown.Value)))
                     MessageBox.Show("Usuario eliminado");
                 else
                     MessageBox.Show("Este usuario no existe");
