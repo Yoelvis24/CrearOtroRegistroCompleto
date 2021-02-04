@@ -18,7 +18,6 @@ namespace CrearOtroRegistroCompleto.Entidades
         public string Rol { get; set; }
         public bool Activo { get; set; }
         public string ConfirmarClave { get; set; }
-        public float CostoHora { get; set; }
 
         public int RolId { get; set; }
         [ForeignKey("RolId")]

@@ -81,9 +81,9 @@ namespace CrearOtroRegistroCompleto
             emailTextBox.Text = usuarios.Email;
             confirmarTextBox.Text = usuarios.ConfirmarClave;
             FechaIngresoDateTimePicker.Value = usuarios.FechaIngreso;
-            costoTextBox.Text = Convert.ToString(usuarios.CostoHora);
             claveTextBox.Text = usuarios.Clave;
             activoCheckBox.Checked = usuarios.Activo;
+            rolComboBox.Text = Convert.ToString(usuarios.RolId);
         }
 
         private Usuarios LlenarClase()
@@ -98,7 +98,6 @@ namespace CrearOtroRegistroCompleto
             usuarios.Activo = activoCheckBox.Checked;
             usuarios.Nombres = nombresTextBox.Text;
             usuarios.ConfirmarClave = confirmarTextBox.Text;
-            usuarios.CostoHora = Convert.ToSingle(costoTextBox.Text);
             usuarios.Rol = rolComboBox.Text;
 
             return usuarios;
@@ -114,7 +113,6 @@ namespace CrearOtroRegistroCompleto
             nombresTextBox.Text = string.Empty;
             confirmarTextBox.Text = string.Empty;
             rolComboBox.Text = string.Empty;
-            costoTextBox.Text = string.Empty;
             FechaIngresoDateTimePicker.Value = DateTime.Now;
             errorProvider1.Clear();
         }
@@ -198,7 +196,12 @@ namespace CrearOtroRegistroCompleto
             else
                 errorProvider1.SetError(usuarioIdNumericUpDown, "Este usuario no existe");
             
+        }
 
+        private void RolesButton_Click(object sender, EventArgs e)
+        {
+            UI.Registros.RegistroRoles registrosRoles = new UI.Registros.RegistroRoles();
+            registrosRoles.Show();
         }
     }
 }

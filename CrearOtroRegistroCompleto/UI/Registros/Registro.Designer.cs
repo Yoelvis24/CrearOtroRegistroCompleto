@@ -47,20 +47,20 @@ namespace CrearOtroRegistroCompleto
             this.nombresLabel = new System.Windows.Forms.Label();
             this.aliasLabel = new System.Windows.Forms.Label();
             this.UsuarioIdLabel = new System.Windows.Forms.Label();
-            this.costoLabel = new System.Windows.Forms.Label();
-            this.costoTextBox = new System.Windows.Forms.TextBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.usuarioIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.RolesButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioIdNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaIngresoDateTimePicker
             // 
+            this.FechaIngresoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaIngresoDateTimePicker.Location = new System.Drawing.Point(116, 136);
             this.FechaIngresoDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechaIngresoDateTimePicker.Name = "FechaIngresoDateTimePicker";
@@ -82,7 +82,7 @@ namespace CrearOtroRegistroCompleto
             this.rolComboBox.Items.AddRange(new object[] {
             "Administrador",
             "Profesor"});
-            this.rolComboBox.Location = new System.Drawing.Point(571, 59);
+            this.rolComboBox.Location = new System.Drawing.Point(571, 98);
             this.rolComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(133, 23);
@@ -91,7 +91,7 @@ namespace CrearOtroRegistroCompleto
             // rolLabel
             // 
             this.rolLabel.AutoSize = true;
-            this.rolLabel.Location = new System.Drawing.Point(541, 62);
+            this.rolLabel.Location = new System.Drawing.Point(541, 101);
             this.rolLabel.Name = "rolLabel";
             this.rolLabel.Size = new System.Drawing.Size(24, 15);
             this.rolLabel.TabIndex = 49;
@@ -99,7 +99,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(454, 98);
+            this.emailTextBox.Location = new System.Drawing.Point(454, 139);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(250, 23);
@@ -108,7 +108,7 @@ namespace CrearOtroRegistroCompleto
             // activoCheckBox
             // 
             this.activoCheckBox.AutoSize = true;
-            this.activoCheckBox.Location = new System.Drawing.Point(644, 28);
+            this.activoCheckBox.Location = new System.Drawing.Point(644, 66);
             this.activoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(60, 19);
@@ -119,7 +119,7 @@ namespace CrearOtroRegistroCompleto
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(412, 101);
+            this.emailLabel.Location = new System.Drawing.Point(412, 139);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(36, 15);
             this.emailLabel.TabIndex = 44;
@@ -127,7 +127,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // confirmarTextBox
             // 
-            this.confirmarTextBox.Location = new System.Drawing.Point(373, 170);
+            this.confirmarTextBox.Location = new System.Drawing.Point(594, 170);
             this.confirmarTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmarTextBox.Name = "confirmarTextBox";
             this.confirmarTextBox.PasswordChar = '*';
@@ -162,7 +162,7 @@ namespace CrearOtroRegistroCompleto
             // confirmarLabel
             // 
             this.confirmarLabel.AutoSize = true;
-            this.confirmarLabel.Location = new System.Drawing.Point(274, 170);
+            this.confirmarLabel.Location = new System.Drawing.Point(495, 173);
             this.confirmarLabel.Name = "confirmarLabel";
             this.confirmarLabel.Size = new System.Drawing.Size(93, 15);
             this.confirmarLabel.TabIndex = 38;
@@ -203,22 +203,6 @@ namespace CrearOtroRegistroCompleto
             this.UsuarioIdLabel.Size = new System.Drawing.Size(18, 15);
             this.UsuarioIdLabel.TabIndex = 34;
             this.UsuarioIdLabel.Text = "ID";
-            // 
-            // costoLabel
-            // 
-            this.costoLabel.AutoSize = true;
-            this.costoLabel.Location = new System.Drawing.Point(489, 170);
-            this.costoLabel.Name = "costoLabel";
-            this.costoLabel.Size = new System.Drawing.Size(76, 15);
-            this.costoLabel.TabIndex = 53;
-            this.costoLabel.Text = "Costo x Hora";
-            // 
-            // costoTextBox
-            // 
-            this.costoTextBox.Location = new System.Drawing.Point(571, 170);
-            this.costoTextBox.Name = "costoTextBox";
-            this.costoTextBox.Size = new System.Drawing.Size(133, 23);
-            this.costoTextBox.TabIndex = 54;
             // 
             // BuscarButton
             // 
@@ -280,18 +264,27 @@ namespace CrearOtroRegistroCompleto
             this.usuarioIdNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.usuarioIdNumericUpDown.TabIndex = 59;
             // 
+            // RolesButton
+            // 
+            this.RolesButton.Location = new System.Drawing.Point(603, 26);
+            this.RolesButton.Name = "RolesButton";
+            this.RolesButton.Size = new System.Drawing.Size(101, 23);
+            this.RolesButton.TabIndex = 60;
+            this.RolesButton.Text = "Registrar Roles";
+            this.RolesButton.UseVisualStyleBackColor = true;
+            this.RolesButton.Click += new System.EventHandler(this.RolesButton_Click);
+            // 
             // RegistroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 293);
+            this.Controls.Add(this.RolesButton);
             this.Controls.Add(this.usuarioIdNumericUpDown);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.BuscarButton);
-            this.Controls.Add(this.costoTextBox);
-            this.Controls.Add(this.costoLabel);
             this.Controls.Add(this.FechaIngresoDateTimePicker);
             this.Controls.Add(this.fechaIngresoLabel);
             this.Controls.Add(this.rolComboBox);
@@ -336,14 +329,13 @@ namespace CrearOtroRegistroCompleto
         private System.Windows.Forms.Label nombresLabel;
         private System.Windows.Forms.Label aliasLabel;
         private System.Windows.Forms.Label UsuarioIdLabel;
-        private System.Windows.Forms.Label costoLabel;
-        private System.Windows.Forms.TextBox costoTextBox;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.NumericUpDown usuarioIdNumericUpDown;
+        private System.Windows.Forms.Button RolesButton;
     }
 }
 

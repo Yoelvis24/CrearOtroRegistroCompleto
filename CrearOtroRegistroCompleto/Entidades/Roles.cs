@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace CrearOtroRegistroCompleto.Entidades
