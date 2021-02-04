@@ -62,7 +62,7 @@ namespace CrearOtroRegistroCompleto.BLL
         public static Usuarios Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Usuarios usuarios = new Usuarios();
+            Usuarios usuarios;
 
             try
             {

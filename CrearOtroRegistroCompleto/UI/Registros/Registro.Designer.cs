@@ -61,7 +61,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // FechaIngresoDateTimePicker
             // 
-            this.FechaIngresoDateTimePicker.Location = new System.Drawing.Point(121, 165);
+            this.FechaIngresoDateTimePicker.Location = new System.Drawing.Point(116, 136);
             this.FechaIngresoDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechaIngresoDateTimePicker.Name = "FechaIngresoDateTimePicker";
             this.FechaIngresoDateTimePicker.Size = new System.Drawing.Size(219, 23);
@@ -70,7 +70,7 @@ namespace CrearOtroRegistroCompleto
             // fechaIngresoLabel
             // 
             this.fechaIngresoLabel.AutoSize = true;
-            this.fechaIngresoLabel.Location = new System.Drawing.Point(25, 168);
+            this.fechaIngresoLabel.Location = new System.Drawing.Point(20, 139);
             this.fechaIngresoLabel.Name = "fechaIngresoLabel";
             this.fechaIngresoLabel.Size = new System.Drawing.Size(80, 15);
             this.fechaIngresoLabel.TabIndex = 51;
@@ -82,7 +82,7 @@ namespace CrearOtroRegistroCompleto
             this.rolComboBox.Items.AddRange(new object[] {
             "Administrador",
             "Profesor"});
-            this.rolComboBox.Location = new System.Drawing.Point(576, 88);
+            this.rolComboBox.Location = new System.Drawing.Point(571, 59);
             this.rolComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(133, 23);
@@ -91,7 +91,7 @@ namespace CrearOtroRegistroCompleto
             // rolLabel
             // 
             this.rolLabel.AutoSize = true;
-            this.rolLabel.Location = new System.Drawing.Point(546, 91);
+            this.rolLabel.Location = new System.Drawing.Point(541, 62);
             this.rolLabel.Name = "rolLabel";
             this.rolLabel.Size = new System.Drawing.Size(24, 15);
             this.rolLabel.TabIndex = 49;
@@ -99,7 +99,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(459, 127);
+            this.emailTextBox.Location = new System.Drawing.Point(454, 98);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(250, 23);
@@ -108,7 +108,7 @@ namespace CrearOtroRegistroCompleto
             // activoCheckBox
             // 
             this.activoCheckBox.AutoSize = true;
-            this.activoCheckBox.Location = new System.Drawing.Point(649, 57);
+            this.activoCheckBox.Location = new System.Drawing.Point(644, 28);
             this.activoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(60, 19);
@@ -119,7 +119,7 @@ namespace CrearOtroRegistroCompleto
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(417, 130);
+            this.emailLabel.Location = new System.Drawing.Point(412, 101);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(36, 15);
             this.emailLabel.TabIndex = 44;
@@ -127,7 +127,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // confirmarTextBox
             // 
-            this.confirmarTextBox.Location = new System.Drawing.Point(378, 196);
+            this.confirmarTextBox.Location = new System.Drawing.Point(373, 170);
             this.confirmarTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmarTextBox.Name = "confirmarTextBox";
             this.confirmarTextBox.PasswordChar = '*';
@@ -136,7 +136,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // claveTextBox
             // 
-            this.claveTextBox.Location = new System.Drawing.Point(121, 196);
+            this.claveTextBox.Location = new System.Drawing.Point(116, 170);
             this.claveTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.claveTextBox.Name = "claveTextBox";
             this.claveTextBox.PasswordChar = '*';
@@ -145,7 +145,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // aliasTextBox
             // 
-            this.aliasTextBox.Location = new System.Drawing.Point(121, 93);
+            this.aliasTextBox.Location = new System.Drawing.Point(116, 64);
             this.aliasTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.aliasTextBox.Name = "aliasTextBox";
             this.aliasTextBox.Size = new System.Drawing.Size(215, 23);
@@ -153,7 +153,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // nombresTextBox
             // 
-            this.nombresTextBox.Location = new System.Drawing.Point(121, 127);
+            this.nombresTextBox.Location = new System.Drawing.Point(116, 98);
             this.nombresTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombresTextBox.Name = "nombresTextBox";
             this.nombresTextBox.Size = new System.Drawing.Size(290, 23);
@@ -162,7 +162,7 @@ namespace CrearOtroRegistroCompleto
             // confirmarLabel
             // 
             this.confirmarLabel.AutoSize = true;
-            this.confirmarLabel.Location = new System.Drawing.Point(279, 199);
+            this.confirmarLabel.Location = new System.Drawing.Point(274, 170);
             this.confirmarLabel.Name = "confirmarLabel";
             this.confirmarLabel.Size = new System.Drawing.Size(93, 15);
             this.confirmarLabel.TabIndex = 38;
@@ -171,7 +171,7 @@ namespace CrearOtroRegistroCompleto
             // claveLabel
             // 
             this.claveLabel.AutoSize = true;
-            this.claveLabel.Location = new System.Drawing.Point(57, 199);
+            this.claveLabel.Location = new System.Drawing.Point(52, 170);
             this.claveLabel.Name = "claveLabel";
             this.claveLabel.Size = new System.Drawing.Size(36, 15);
             this.claveLabel.TabIndex = 37;
@@ -180,7 +180,7 @@ namespace CrearOtroRegistroCompleto
             // nombresLabel
             // 
             this.nombresLabel.AutoSize = true;
-            this.nombresLabel.Location = new System.Drawing.Point(57, 130);
+            this.nombresLabel.Location = new System.Drawing.Point(52, 101);
             this.nombresLabel.Name = "nombresLabel";
             this.nombresLabel.Size = new System.Drawing.Size(56, 15);
             this.nombresLabel.TabIndex = 36;
@@ -189,7 +189,7 @@ namespace CrearOtroRegistroCompleto
             // aliasLabel
             // 
             this.aliasLabel.AutoSize = true;
-            this.aliasLabel.Location = new System.Drawing.Point(57, 96);
+            this.aliasLabel.Location = new System.Drawing.Point(52, 67);
             this.aliasLabel.Name = "aliasLabel";
             this.aliasLabel.Size = new System.Drawing.Size(32, 15);
             this.aliasLabel.TabIndex = 35;
@@ -198,7 +198,7 @@ namespace CrearOtroRegistroCompleto
             // UsuarioIdLabel
             // 
             this.UsuarioIdLabel.AutoSize = true;
-            this.UsuarioIdLabel.Location = new System.Drawing.Point(57, 61);
+            this.UsuarioIdLabel.Location = new System.Drawing.Point(52, 32);
             this.UsuarioIdLabel.Name = "UsuarioIdLabel";
             this.UsuarioIdLabel.Size = new System.Drawing.Size(18, 15);
             this.UsuarioIdLabel.TabIndex = 34;
@@ -207,7 +207,7 @@ namespace CrearOtroRegistroCompleto
             // costoLabel
             // 
             this.costoLabel.AutoSize = true;
-            this.costoLabel.Location = new System.Drawing.Point(494, 199);
+            this.costoLabel.Location = new System.Drawing.Point(489, 170);
             this.costoLabel.Name = "costoLabel";
             this.costoLabel.Size = new System.Drawing.Size(76, 15);
             this.costoLabel.TabIndex = 53;
@@ -215,7 +215,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // costoTextBox
             // 
-            this.costoTextBox.Location = new System.Drawing.Point(576, 196);
+            this.costoTextBox.Location = new System.Drawing.Point(571, 170);
             this.costoTextBox.Name = "costoTextBox";
             this.costoTextBox.Size = new System.Drawing.Size(133, 23);
             this.costoTextBox.TabIndex = 54;
@@ -223,7 +223,7 @@ namespace CrearOtroRegistroCompleto
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(247, 51);
+            this.BuscarButton.Location = new System.Drawing.Point(242, 22);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(43, 34);
             this.BuscarButton.TabIndex = 55;
@@ -234,7 +234,7 @@ namespace CrearOtroRegistroCompleto
             // 
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(185, 257);
+            this.NuevoButton.Location = new System.Drawing.Point(173, 211);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(95, 63);
             this.NuevoButton.TabIndex = 56;
@@ -247,7 +247,7 @@ namespace CrearOtroRegistroCompleto
             // 
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(326, 257);
+            this.GuardarButton.Location = new System.Drawing.Point(320, 211);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(95, 63);
             this.GuardarButton.TabIndex = 57;
@@ -260,7 +260,7 @@ namespace CrearOtroRegistroCompleto
             // 
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(459, 257);
+            this.EliminarButton.Location = new System.Drawing.Point(454, 211);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(95, 63);
             this.EliminarButton.TabIndex = 58;
@@ -275,7 +275,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // usuarioIdNumericUpDown
             // 
-            this.usuarioIdNumericUpDown.Location = new System.Drawing.Point(121, 57);
+            this.usuarioIdNumericUpDown.Location = new System.Drawing.Point(116, 28);
             this.usuarioIdNumericUpDown.Name = "usuarioIdNumericUpDown";
             this.usuarioIdNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.usuarioIdNumericUpDown.TabIndex = 59;
@@ -284,7 +284,7 @@ namespace CrearOtroRegistroCompleto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 356);
+            this.ClientSize = new System.Drawing.Size(728, 293);
             this.Controls.Add(this.usuarioIdNumericUpDown);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
