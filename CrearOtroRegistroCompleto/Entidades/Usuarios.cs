@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CrearOtroRegistroCompleto.Entidades
 {
@@ -19,18 +20,8 @@ namespace CrearOtroRegistroCompleto.Entidades
         public string ConfirmarClave { get; set; }
         public float CostoHora { get; set; }
 
-        public Usuarios()
-        {
-            UsuarioId = 0;
-            FechaIngreso = DateTime.Now;
-            Alias = string.Empty;
-            Nombres = string.Empty;
-            Email = string.Empty;
-            Clave = string.Empty;
-            Rol = string.Empty;
-            Activo = true;
-            ConfirmarClave = string.Empty;
-            CostoHora = 0.0f;
-        }
+        public int RolId { get; set; }
+        [ForeignKey("RolId")]
+        public virtual Roles rol{ get; set; }
     }
 }
