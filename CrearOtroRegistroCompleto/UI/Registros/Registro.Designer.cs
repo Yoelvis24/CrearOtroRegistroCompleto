@@ -78,7 +78,7 @@ namespace CrearOtroRegistroCompleto
             // rolComboBox
             // 
             this.rolComboBox.FormattingEnabled = true;
-            this.rolComboBox.Location = new System.Drawing.Point(571, 98);
+            this.rolComboBox.Location = new System.Drawing.Point(571, 67);
             this.rolComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(133, 23);
@@ -87,7 +87,7 @@ namespace CrearOtroRegistroCompleto
             // rolLabel
             // 
             this.rolLabel.AutoSize = true;
-            this.rolLabel.Location = new System.Drawing.Point(541, 101);
+            this.rolLabel.Location = new System.Drawing.Point(541, 72);
             this.rolLabel.Name = "rolLabel";
             this.rolLabel.Size = new System.Drawing.Size(24, 15);
             this.rolLabel.TabIndex = 49;
@@ -95,7 +95,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(454, 136);
+            this.emailTextBox.Location = new System.Drawing.Point(454, 101);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(250, 23);
@@ -104,7 +104,7 @@ namespace CrearOtroRegistroCompleto
             // activoCheckBox
             // 
             this.activoCheckBox.AutoSize = true;
-            this.activoCheckBox.Location = new System.Drawing.Point(644, 66);
+            this.activoCheckBox.Location = new System.Drawing.Point(644, 37);
             this.activoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(60, 19);
@@ -115,7 +115,7 @@ namespace CrearOtroRegistroCompleto
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(412, 139);
+            this.emailLabel.Location = new System.Drawing.Point(412, 104);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(36, 15);
             this.emailLabel.TabIndex = 44;
@@ -123,7 +123,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // confirmarTextBox
             // 
-            this.confirmarTextBox.Location = new System.Drawing.Point(594, 170);
+            this.confirmarTextBox.Location = new System.Drawing.Point(594, 139);
             this.confirmarTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmarTextBox.Name = "confirmarTextBox";
             this.confirmarTextBox.PasswordChar = '*';
@@ -158,7 +158,7 @@ namespace CrearOtroRegistroCompleto
             // confirmarLabel
             // 
             this.confirmarLabel.AutoSize = true;
-            this.confirmarLabel.Location = new System.Drawing.Point(495, 173);
+            this.confirmarLabel.Location = new System.Drawing.Point(495, 142);
             this.confirmarLabel.Name = "confirmarLabel";
             this.confirmarLabel.Size = new System.Drawing.Size(93, 15);
             this.confirmarLabel.TabIndex = 38;
