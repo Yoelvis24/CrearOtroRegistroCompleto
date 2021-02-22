@@ -53,7 +53,6 @@ namespace CrearOtroRegistroCompleto
             this.EliminarButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.usuarioIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.RolesButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioIdNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -79,9 +78,6 @@ namespace CrearOtroRegistroCompleto
             // rolComboBox
             // 
             this.rolComboBox.FormattingEnabled = true;
-            this.rolComboBox.Items.AddRange(new object[] {
-            "Administrador",
-            "Profesor"});
             this.rolComboBox.Location = new System.Drawing.Point(571, 98);
             this.rolComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rolComboBox.Name = "rolComboBox";
@@ -99,7 +95,7 @@ namespace CrearOtroRegistroCompleto
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(454, 139);
+            this.emailTextBox.Location = new System.Drawing.Point(454, 136);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(250, 23);
@@ -264,22 +260,11 @@ namespace CrearOtroRegistroCompleto
             this.usuarioIdNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.usuarioIdNumericUpDown.TabIndex = 59;
             // 
-            // RolesButton
-            // 
-            this.RolesButton.Location = new System.Drawing.Point(603, 26);
-            this.RolesButton.Name = "RolesButton";
-            this.RolesButton.Size = new System.Drawing.Size(101, 23);
-            this.RolesButton.TabIndex = 60;
-            this.RolesButton.Text = "Registrar Roles";
-            this.RolesButton.UseVisualStyleBackColor = true;
-            this.RolesButton.Click += new System.EventHandler(this.RolesButton_Click);
-            // 
             // RegistroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 293);
-            this.Controls.Add(this.RolesButton);
             this.Controls.Add(this.usuarioIdNumericUpDown);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -304,6 +289,7 @@ namespace CrearOtroRegistroCompleto
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroForm";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.RegistroForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioIdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
@@ -335,7 +321,6 @@ namespace CrearOtroRegistroCompleto
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.NumericUpDown usuarioIdNumericUpDown;
-        private System.Windows.Forms.Button RolesButton;
     }
 }
 

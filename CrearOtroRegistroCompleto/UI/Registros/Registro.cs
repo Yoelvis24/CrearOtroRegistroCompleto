@@ -79,11 +79,10 @@ namespace CrearOtroRegistroCompleto
             nombresTextBox.Text = usuarios.Nombres;
             aliasTextBox.Text = usuarios.Alias;
             emailTextBox.Text = usuarios.Email;
-            confirmarTextBox.Text = usuarios.ConfirmarClave;
             FechaIngresoDateTimePicker.Value = usuarios.FechaIngreso;
             claveTextBox.Text = usuarios.Clave;
             activoCheckBox.Checked = usuarios.Activo;
-            rolComboBox.Text = Convert.ToString(usuarios.RolId);
+            rolComboBox.SelectedIndex = usuarios.RolId;
         }
 
         private Usuarios LlenarClase()
@@ -97,8 +96,7 @@ namespace CrearOtroRegistroCompleto
             usuarios.FechaIngreso = FechaIngresoDateTimePicker.Value;
             usuarios.Activo = activoCheckBox.Checked;
             usuarios.Nombres = nombresTextBox.Text;
-            usuarios.ConfirmarClave = confirmarTextBox.Text;
-            usuarios.Rol = rolComboBox.Text;
+            usuarios.RolId = rolComboBox.SelectedIndex;
 
             return usuarios;
         }
@@ -112,8 +110,8 @@ namespace CrearOtroRegistroCompleto
             claveTextBox.Text = string.Empty;
             nombresTextBox.Text = string.Empty;
             confirmarTextBox.Text = string.Empty;
-            rolComboBox.Text = string.Empty;
             FechaIngresoDateTimePicker.Value = DateTime.Now;
+            activoCheckBox.Checked = false;
             errorProvider1.Clear();
         }
 
@@ -202,6 +200,13 @@ namespace CrearOtroRegistroCompleto
         {
             UI.Registros.RegistroRoles registrosRoles = new UI.Registros.RegistroRoles();
             registrosRoles.Show();
+        }
+
+        private void RegistroForm_Load(object sender, EventArgs e)
+        {
+            rolComboBox.DataSource = RolesBLL.GetRoles();
+            rolComboBox.DisplayMember = "Descripcion";
+            rolComboBox.ValueMember = "RolId";
         }
     }
 }

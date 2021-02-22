@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrearOtroRegistroCompleto.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210204045712_Inicial")]
+    [Migration("20210204133630_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,9 +50,6 @@ namespace CrearOtroRegistroCompleto.Migrations
                     b.Property<string>("Clave")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ConfirmarClave")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
@@ -62,15 +59,15 @@ namespace CrearOtroRegistroCompleto.Migrations
                     b.Property<string>("Nombres")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Rol")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("RolId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("RolesId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("UsuarioId");
 
-                    b.HasIndex("RolId");
+                    b.HasIndex("RolesId");
 
                     b.ToTable("Usuarios");
                 });
@@ -79,9 +76,7 @@ namespace CrearOtroRegistroCompleto.Migrations
                 {
                     b.HasOne("CrearOtroRegistroCompleto.Entidades.Roles", "rol")
                         .WithMany()
-                        .HasForeignKey("RolId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RolesId");
 
                     b.Navigation("rol");
                 });

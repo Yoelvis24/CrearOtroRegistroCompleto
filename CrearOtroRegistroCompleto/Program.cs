@@ -17,7 +17,7 @@ namespace CrearOtroRegistroCompleto
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegistroForm());
+            Application.Run(new Inicio());
         }
     }
 }

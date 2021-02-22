@@ -15,12 +15,10 @@ namespace CrearOtroRegistroCompleto.Entidades
         public string Nombres { get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
-        public string Rol { get; set; }
-        public bool Activo { get; set; }
-        public string ConfirmarClave { get; set; }
-
+        public bool Activo { get; set; }      
         public int RolId { get; set; }
-        [ForeignKey("RolId")]
+
+        [ForeignKey("RolesId")]
         public virtual Roles rol{ get; set; }
     }
 }

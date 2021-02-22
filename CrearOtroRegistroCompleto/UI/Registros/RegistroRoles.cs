@@ -24,20 +24,12 @@ namespace CrearOtroRegistroCompleto.UI.Registros
             fechaCreacionDateTimePicker.Value = DateTime.Now;
         }
 
-        private bool LlenarCampos(int id)
+        private void LlenarCampos(Roles roles)
         {
-            Roles roles = RolesBLL.Buscar(Convert.ToInt32(rolIdNumericUpDown.Value));
-
-            if (roles != null)
-            {
-                //El id no lo llenamos porque ya estaria lleno
-                rolIdNumericUpDown.Value = roles.RolId;
-                descripcionTextBox.Text = roles.Descripcion;
-                return true;
-            }
-            else
-                return false;
+            rolIdNumericUpDown.Value = roles.RolId;
+            descripcionTextBox.Text = roles.Descripcion;
         }
+           
 
         private Roles LlenarClase()
         {
@@ -92,6 +84,14 @@ namespace CrearOtroRegistroCompleto.UI.Registros
                 }
                 paso = RolesBLL.Modificar(roles);
             }
+
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Se ha guardado correctamente");
+            }
+            else
+                MessageBox.Show("No fue posible guardar");
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace CrearOtroRegistroCompleto.UI.Registros
             if (roles != null)
             {
                 MessageBox.Show("Usuario encontrado");
-                LlenarCampos(Convert.ToInt32(rolIdNumericUpDown.Value));
+                LlenarCampos(roles);
             }
             else
             {

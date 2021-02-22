@@ -32,26 +32,25 @@ namespace CrearOtroRegistroCompleto.Migrations
                     Nombres = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
                     Clave = table.Column<string>(type: "TEXT", nullable: true),
-                    Rol = table.Column<string>(type: "TEXT", nullable: true),
                     Activo = table.Column<bool>(type: "INTEGER", nullable: false),
-                    ConfirmarClave = table.Column<string>(type: "TEXT", nullable: true),
-                    RolId = table.Column<int>(type: "INTEGER", nullable: false)
+                    RolId = table.Column<int>(type: "INTEGER", nullable: false),
+                    RolesId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.UsuarioId);
                     table.ForeignKey(
-                        name: "FK_Usuarios_Roles_RolId",
-                        column: x => x.RolId,
+                        name: "FK_Usuarios_Roles_RolesId",
+                        column: x => x.RolesId,
                         principalTable: "Roles",
                         principalColumn: "RolId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Usuarios_RolId",
+                name: "IX_Usuarios_RolesId",
                 table: "Usuarios",
-                column: "RolId");
+                column: "RolesId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

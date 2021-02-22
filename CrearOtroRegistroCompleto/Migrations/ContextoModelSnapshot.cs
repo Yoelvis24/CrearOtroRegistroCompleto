@@ -48,9 +48,6 @@ namespace CrearOtroRegistroCompleto.Migrations
                     b.Property<string>("Clave")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ConfirmarClave")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
@@ -60,15 +57,15 @@ namespace CrearOtroRegistroCompleto.Migrations
                     b.Property<string>("Nombres")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Rol")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("RolId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("RolesId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("UsuarioId");
 
-                    b.HasIndex("RolId");
+                    b.HasIndex("RolesId");
 
                     b.ToTable("Usuarios");
                 });
@@ -77,9 +74,7 @@ namespace CrearOtroRegistroCompleto.Migrations
                 {
                     b.HasOne("CrearOtroRegistroCompleto.Entidades.Roles", "rol")
                         .WithMany()
-                        .HasForeignKey("RolId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RolesId");
 
                     b.Navigation("rol");
                 });
